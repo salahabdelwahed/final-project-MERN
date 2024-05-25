@@ -78,7 +78,7 @@ router.post("/addTech", async (req, res) => {
 });
 //end
 //delete technicien
-router.delete("/:id", async (req, res) => {
+router.delete("/tech/:id", async (req, res) => {
   try {
     const idTech = req.params.id;
     const TechDel = await User.deleteOne({ _id: idTech });
@@ -102,7 +102,7 @@ router.post("/client", async (req, res) => {
 });
 //end
 //delete client
-router.delete("/:id", async (req, res) => {
+router.delete("/client/:id", async (req, res) => {
   try {
     const idClient = req.params.id;
     const ClientDel = await User.deleteOne({ _id: idClient });
